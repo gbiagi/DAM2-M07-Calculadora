@@ -130,8 +130,6 @@ public class CalculatorController {
         } else {
             operacionPantalla += valor;
         }
-
-        System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
         pantalla.setText(operacionPantalla);
     }
 
@@ -139,7 +137,6 @@ public class CalculatorController {
     public void clickOperador(String valor) {
         newNum = true;
         operador = valor;
-        System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
         num1 = Double.parseDouble(operacionPantalla);
     }
 
@@ -149,7 +146,6 @@ public class CalculatorController {
         num1 = 0;
         num2 = 0;
         resultado = 0;
-        System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
         pantalla.setText(operacionPantalla);
     }
     // Calcular el resultat de la operació
@@ -157,27 +153,19 @@ public class CalculatorController {
         num2 = Double.parseDouble(operacionPantalla);
         if (operador == null) {
             resultado = num2;
-            System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
         }
         else if (operador.equals("+")) {
             resultado = num1 + num2;
-            System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
 
         }
         else if (operador.equals("-")) {
             resultado = num1 - num2;
-            System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
-
         }
         else if (operador.equals("*")) {
             resultado = num1 * num2;
-            System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
-
         }
         else if (operador.equals("/")) {
             resultado = num1 / num2;
-            System.out.println("Num1 = " + num1 + " Num2 = " + num2 + " Resultado = " + resultado + " Operador = " + operador + " Pantalla = " + operacionPantalla);
-
         }
         // Comprova si el resultat és un nombre enter
         if (resultado % 1 == 0) {
